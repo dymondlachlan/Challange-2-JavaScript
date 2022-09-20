@@ -3,43 +3,43 @@ import './style.css';
 const spinBtn = document.querySelector("#Spin");
 spinBtn.addEventListener("click", ()=> Spin())
 let count = 0
-let red = 0
-let blue = 0 
-let yellow = 0
-let green = 0
-const Colours = ["red", "blue", "yellow", "green"];
+let Red = 0
+let Blue = 0 
+let Yellow = 0
+let Green = 0
+const Colours = ["Red", "Blue", "Yellow", "Green"];
 
 function Spin(){
   count ++ 
   let Spin=Math.floor(Math.random() *Colours.length);
   if (Spin == 0){
-    red++
+    Red++
   }
   if (Spin == 1){
-    blue++
+    Blue++
   }
   if (Spin == 2){
-    yellow++
+    Yellow++
   }
   if (Spin == 3){
-    green++
+    Green++
   }
   console.log(Spin);
   document.getElementById('Box').style.backgroundColor = Colours[Spin];
-  document.getElementById("Results").innerHTML += Colours[Spin] + " ";
+  document.getElementById("Results").innerHTML += Colours[Spin] + " , ";
   document.getElementById("TotalSpins").innerHTML = count;
-  let maxnum = Math.max(red, blue, yellow, green);
+  let maxnum = Math.max(Red, Blue, Yellow, Green);
   let maxcol = 0; 
-  if (maxnum == red){
+  if (maxnum == Red){
     maxcol = 0
   }
-  if (maxnum == blue){
+  if (maxnum == Blue){
     maxcol = 1
   }
-  if (maxnum == yellow){
+  if (maxnum == Yellow){
     maxcol = 2
   }
-  if (maxnum == green){
+  if (maxnum == Green){
     maxcol = 3
   }
 
